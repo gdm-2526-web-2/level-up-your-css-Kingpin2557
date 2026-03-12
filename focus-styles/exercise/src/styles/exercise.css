@@ -2,9 +2,19 @@
 
 /* Focus-within - Geef het label een andere kleur! */
 
+label:focus-within {
+    color: red;
+}
 
 /* Tonen dat een veld nog niet is ingevuld met placeholder-shown */
+label:has(input) input:placeholder-shown {
+    background-color: rebeccapurple;
+}
 
 /* Placeholder shown? Maak een form label animatie: https://blog.surjithctly.in/creating-a-floating-label-input-form-using-tailwindcss-no-javascript  */
+
+label:has(input) input:not(:placeholder-shown) {
+    translate: y 10px;
+}
 
 /* Focus-visible - Maak de focus outline duidelijker! */
