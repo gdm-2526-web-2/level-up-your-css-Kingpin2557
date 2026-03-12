@@ -1,11 +1,17 @@
 /**
 * Geef de bullet points een andere vorm (ingebouwd)
-
 * Geef de bullet points een andere kleur dan de tekst
 *
 * Geef de bullet points een andere vorm dan de ingebouwde vormen
 */
 
+li {
+    list-style-type: "🔥";
+}
+
 /**
 * Stijl de selectie van tekst.
 */
+p::selection {
+    color: blue;
+}
