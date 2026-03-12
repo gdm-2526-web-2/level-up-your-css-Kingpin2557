@@ -7,6 +7,14 @@
 * Wat met de specificiteit? Klassieke selector vs :is()? Plaats ze eens boven of onder elkaar.
 */
 
+:is(h3, span, strong) {
+    color: red;
+}
+
+.is-container a:is(:hover, :focus) {
+    color: blue;
+}
+
 /**
 * Gebruik :where selector om te stijlen zoals in de tekst beschreven staat.Wat gebeurt er met de specificiteit?
 */
