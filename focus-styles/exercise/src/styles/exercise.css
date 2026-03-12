@@ -13,8 +13,22 @@ label:has(input) input:placeholder-shown {
 
 /* Placeholder shown? Maak een form label animatie: https://blog.surjithctly.in/creating-a-floating-label-input-form-using-tailwindcss-no-javascript  */
 
-label:has(input) input:not(:placeholder-shown) {
-    translate: y 10px;
+.form {
+    span {
+        display: block;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(51px) translateX(19px);
+    }
+}
+
+label:has(input:not(:placeholder-shown)) span {
+    transition: transform 0.3s ease-in-out;
+
+    transform: translateY(5px) translateX(0px);
 }
 
 /* Focus-visible - Maak de focus outline duidelijker! */
+
+.focus-only:focus {
+    outline: 5px solid red;
+}
