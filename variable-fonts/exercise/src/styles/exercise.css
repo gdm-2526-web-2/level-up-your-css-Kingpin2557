@@ -1,6 +1,26 @@
 /* Variable fonts don't just work with weight! */
 /* https://fonts.google.com/specimen/Kablammo */
 
+@property --morf {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
 h1 {
-  /* Using the MORF axis to vary the shape of the letters, play with hover effects! */
+    --morf: 0;
+    font-variation-settings: "MORF" var(--morf);
+    animation: morphVar 3s ease-in-out infinite alternate;
+
+    &:hover {
+        font-variation-settings: "MORF" 60;
+    }
+}
+
+@keyframes morphVar {
+    from {
+        --morf: 0;
+    }
+    to {
+        --morf: 60;
+    }
 }
