@@ -5,6 +5,9 @@ const arrModalTrigger = document.querySelectorAll("[data-model-target]");
 
 arrModalTrigger.forEach((modalTrigger) => {
   modalTrigger.addEventListener("click", (e) => {
+    console.log(e.target);
+    console.log(e.currentTarget);
+
     const targetName = e.currentTarget.dataset.modelTarget;
     const dialog = document.querySelector(`[data-model="${targetName}"]`);
 
