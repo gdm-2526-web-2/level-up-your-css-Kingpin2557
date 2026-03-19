@@ -1,0 +1,11 @@
+.card.dark-mode {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.card {
+    @media screen and (prefers-color-scheme: light) {
+        background-color: white;
+        border: 1px solid;
+    }
+}
