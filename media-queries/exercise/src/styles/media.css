@@ -1,1 +1,27 @@
 /**/
+
+:root {
+    --primary: hsl(40, 100%, 43%);
+    --secondary: hsl(266, 100%, 42%);
+    --print: hsl(255, 100%, 100%);
+}
+
+body {
+    background-color: var(--primary);
+
+    @media screen and (min-width: 420px) {
+        background-color: var(--secondary);
+        --pico-font-size: 6rem;
+    }
+
+    @media print {
+        background-color: var(--print);
+        color: black;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1199.98px) {
+    :root {
+        --pico-color: hsl(230, 50%, 30%);
+    }
+}
