@@ -4,3 +4,14 @@
 
 /* Anchor positioning met popover  */
 /* Extra (volgend hoofdstuk): Animeren? @starting-style  */
+
+.trigger {
+    anchor-name: --imd;
+}
+
+.popover {
+    position: absolute;
+    position-anchor: --imd;
+    top: anchor(-138%);
+    left: anchor(106%);
+}
